@@ -1,14 +1,12 @@
 DevTools Backend
 ================
 
-‼️ __Attention:__ this project is not maintained anymore. Dependencies are out of date and introduce security vulnerabilities. Please not use it in production. ‼️
-
 A Node.JS implementation of the Chrome DevTools backend for debugging arbitrary web platforms (e.g. HbbTV applications on Smart TVs). It is the counterpart of the [devtools-frontend](https://github.com/ChromeDevTools/devtools-frontend) and is like [weinre](https://people.apache.org/~pmuellr/weinre/docs/latest/Home.html) just in "new".
 
 # Requirements
 
-- [Node.js](https://nodejs.org/en/) (v8.2.1)
-- [NPM](https://www.npmjs.com/) (v5.3.0 or higher)
+- [Node.js](https://nodejs.org/en/) (v16.0.0)
+- [NPM](https://www.npmjs.com/) (v8.0.0 or higher)
 
 # Installation
 
@@ -16,7 +14,7 @@ To run the server you need to first clone the repo and install all its dependenc
 
 ```sh
 # clone repository
-$ git clone git@gitlab.fokus.fraunhofer.de:christian.bromann/devtools-backend.git
+$ git clone https://github.com/TheRealGeoDash2019/devtools-backend.git
 $ cd devtools-backend
 # install dependencies
 $ npm install
@@ -75,7 +73,3 @@ After files are recompiled you need to restart the server. This can be triggered
 ```sh
 $ npm run start:dev
 ```
-
-***
-
-This project was created as part of a master thesis by [Christian Bromann](https://github.com/christian-bromann) on _"Design and implementation of a Development and Test Automation Platform for HbbTV"_. The dissertation originated in cooperation with the [Fraunhofer Institute for Open Communication Systems (FOKUS)](https://www.fokus.fraunhofer.de/en) and [Louay Bassbouss](https://github.com/louaybassbouss).
