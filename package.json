@@ -1,8 +1,8 @@
 {
   "name": "devtools-backend",
-  "author": "Christian Bromann <christian@saucelabs.com>",
+  "author": "TheRealGeoDash <therealgeodash@lhost.dev>",
   "description": "A Node.JS implementation of the devtools backend for debugging arbitrary web platforms",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "./build/index.js",
   "directories": {
     "lib": "lib"
@@ -18,17 +18,16 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git@github.com:christian-bromann/devtools-backend.git"
+    "url": "git@github.com:TheRealGeoDash2019/devtools-backend.git"
   },
   "bugs": {
-    "url": "https://github.com/christian-bromann/devtools-backend/issues"
+    "url": "https://github.com/TheRealGeoDash2019/devtools-backend/issues"
   },
   "engines": {
-    "node": ">=7.4.0",
-    "npm": ">=4.0.5"
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   },
   "scripts": {
-    "aws:login": "eval $(aws --profile default ecr get-login --region eu-west-1)",
     "build": "run-s build:*",
     "build:driver": "run-s clean compile copy webpack",
     "clean": "rimraf -rf ./build",
@@ -36,10 +35,7 @@
     "copy": "cpx ./views ./build",
     "dev": "run-p start:dev:*",
     "docker:build": "docker build -t devtools-backend .",
-    "docker:tag": "docker tag devtools-backend:latest 268024020396.dkr.ecr.eu-west-1.amazonaws.com/devtools-backend:latest",
-    "docker:push": "docker push 268024020396.dkr.ecr.eu-west-1.amazonaws.com/devtools-backend:latest",
     "eslint": "eslint ./lib/*.js",
-    "release": "run-s aws:login docker:build docker:tag docker:push",
     "start": "npm run start:server",
     "start:dev": "NODE_ENV=development nodemon -e html,js,json,yaml --watch build --ignore build/scripts/",
     "start:server": "node build/index.js",
