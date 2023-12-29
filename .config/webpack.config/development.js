@@ -5,7 +5,7 @@ import common from './common'
 const config = {
     cache: true,
     module: {
-        loaders: []
+        rules: []
     }
 }
 

@@ -31,10 +31,10 @@ export default {
         reasons: true
     },
     module: {
-        loaders: [{
+        rules: [{
             test: /\.js$/,
             exclude: /node_modules/,
-            loader: 'babel-loader'
+            use: 'babel-loader'
         }]
     },
     // resolve bower components based on the 'main' property

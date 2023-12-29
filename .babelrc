@@ -1,16 +1,11 @@
 {
     "presets": [
-      ["env", {
-        "targets": {
-          "node": "0.12"
-        }
-      }],
-      "stage-0"
+      "@babel/preset-env",
     ],
     "plugins": [
         "syntax-async-functions",
-        "transform-runtime",
+        "@babel/plugin-transform-runtime",
         "add-module-exports",
-        "transform-class-properties"
+        "@babel/transform-class-properties"
     ]
 }

@@ -29,7 +29,7 @@ const config = {
         new DuplicatePackageCheckerWebpackPlugin(),
     ],
     module: {
-        loaders: []
+        rules: []
     }
 }
 
